@@ -67,6 +67,18 @@ public class Filme {
         this.imDbRatingCount = imDbRatingCount;
     }
 
+    public String getRatingAsStars(String rating) {
+        String stars = "";
+        Double ratingDouble = Double.parseDouble(rating);
+        int ratingInt = ratingDouble.intValue();
+        for (int i = 0; i < ratingInt; i++) {
+            stars += "\u2B50";
+        }
+
+        return stars;
+
+    }
+
 }
     
 
